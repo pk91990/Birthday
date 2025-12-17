@@ -189,7 +189,7 @@ const animationTimeline = () => {
     )
     .from(
         ".scene",
-        0.5, {
+        6, {
             scale: 3.5,
             opacity: 0,
             x: 25,
