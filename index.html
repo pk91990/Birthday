@@ -14,6 +14,7 @@
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <!-- My Style -->
   <link rel="stylesheet" href="./style/main.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
         <div class="one">
             <h1 class="one">
                 Hi
-                <span id="name">Khushi </span>
+                <span id="name">Kiran </span>
             </h1>
             <p class="two" id="greetingText">This is for u Only :) </p>
         </div>
@@ -66,11 +67,46 @@
         </div>
 
         <div class="six">
-            <img src="#" alt="profile" class="profile-picture" id="imagePath"/>
-            <img src="img/hat.svg" alt="hat" class="hat" />
+            <div class="scene">
+  <div class="card" id="card">
+
+    <!-- FRONT -->
+    <div class="card-face front">
+      <div class="carousel">
+        <div class="track" id="track">
+          <img src="img/WhatsApp Image 2025-12-13 at 21.59.14.jpeg">
+          <img src="img/WhatsApp Image 2025-12-13 at 21.59.42.jpeg">
+          <img src="img/WhatsApp Image 2025-12-13 at 21.59.43.jpeg">
+          <img src="img/WhatsApp Image 2025-12-17 at 21.15.01.jpeg">
+          <img src="img/WhatsApp Image 2025-12-13 at 21.57.40.jpeg">
+          <img src="img/WhatsApp Image 2025-12-13 at 21.59.43.jpeg">
+        </div>
+      </div>
+      <h2>Tap to Open 🎁</h2>
+      <p>Swipe memories, tap for surprise 💖</p>
+    </div>
+
+    <!-- BACK -->
+    <div class="card-face back">
+      <canvas id="fireworks"></canvas>
+
+      <div class="back-content">
+        <div class="cake">
+          <img src="img/WhatsApp Image 2025-12-17 at 21.16.40.jpeg">
+          <div class="candle"><div class="flame"></div></div>
+        </div>
+        <h1>Happy Birthday 🎉</h1>
+        <p>May your life shine brighter ✨</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+            <div class="hat"></div>
             <div class="wish">
-                <h3 class="wish-hbd">Happy Birthday!</h3>
-                <h5 id="wishText">May the Happiness always be with you! ;)<br>"Happy birthday. Some people remain special no matter what, and you are one of them. Wishing you smiles, calm days, and a bright future."</h5>
+                <h3 class="wish-hbd"></h3>
+                <h5 id="wishText"></h5>
                 
             </div>
         </div>
@@ -157,5 +193,5 @@
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="application/javascript" src="./script/main.js"></script>
-
+    <script src="script.js"></script>
 </html>

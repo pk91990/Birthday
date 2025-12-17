@@ -1,0 +1,177 @@
+.six .scene {
+  display: inline-block;
+  height: 350px;
+  max-width: 100%;
+  /* height: auto; */
+}
+
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  overflow:hidden;
+}
+
+/* Scene */
+.scene{
+
+
+}
+
+.card{
+  width:100%;
+  height:100%;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform 1s cubic-bezier(.4,.2,.2,1);
+  cursor:pointer;
+}
+
+.card.flipped{
+  transform:rotateY(180deg);
+}
+
+/* Faces */
+.card-face{
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  backface-visibility:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
+  text-align:center;
+}
+
+/* FRONT */
+.front{
+  background:rgba(255,255,255,.25);
+  backdrop-filter:blur(12px);
+  color:#fff;
+}
+
+/* 🔄 Image carousel */
+.carousel{
+  width:100%;
+  height:200px;
+  overflow:hidden;
+  border-radius:16px;
+  margin-bottom:12px;
+}
+
+.track{
+  display:flex;
+  transition:transform .6s ease;
+}
+
+.track img{
+  width:320px;
+  height:200px;
+  object-fit:cover;
+}
+
+/* BACK */
+.back{
+  background:linear-gradient(135deg,#ff6f91,#ff9671);
+  transform:rotateY(180deg);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+#fireworks{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+
+.back-content{
+  position:relative;
+  z-index:2;
+}
+
+/* 🎂 Cake */
+.cake{
+  width:120px;
+  height: auto;
+  margin:10px auto;
+  position:relative;
+}
+
+.cake img{width:100%;}
+
+.candle{
+  position:absolute;
+  top:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  width:6px;
+  height:22px;
+  background:#fff;
+  border-radius:3px;
+}
+
+.flame{
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  width:14px;
+  height:18px;
+  background:radial-gradient(circle,#ff0,#ff6600);
+  border-radius:50%;
+  animation:flicker .15s infinite alternate;
+}
+
+@keyframes flicker{
+  from{transform:translateX(-50%) scale(1);}
+  to{transform:translateX(-50%) scale(1.25);}
+}
+
+/* 💓 Heart burst */
+.burst-heart{
+  position:fixed;
+  font-size:22px;
+  animation:burst 1s ease forwards;
+  pointer-events:none;
+}
+
+@keyframes burst{
+  0%{transform:scale(0);opacity:1;}
+  100%{transform:scale(1.6) translateY(-80px);opacity:0;}
+}
+
+
+
+
+
+
+
+/* Floating hearts */
+.heart{
+  position:fixed;
+  font-size:22px;
+  animation:floatUp linear forwards;
+  pointer-events:none;
+  opacity:0.9;
+}
+
+@keyframes floatUp{
+  0%{
+    transform:translateY(0) scale(0.6);
+    opacity:0;
+  }
+  10%{opacity:1;}
+  100%{
+    transform:translateY(-120vh) scale(1.4);
+    opacity:0;
+  }
+}
+
+/* Center text */
